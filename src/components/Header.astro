@@ -1,0 +1,44 @@
+---
+import { getEntry } from "astro:content";
+import { getLangFromUrl } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const navItems = (await getEntry("navItems", lang))?.data.items || [];
+---
+
+<header
+    class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+>
+    <nav
+        id="header-nav"
+        class="flex justify-center items-center px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 dark:bg-gray-800/90 bg-white/50"
+    >
+        {
+            navItems.map(
+                (item: { title: string; label: string; url: string }) => (
+                    <a
+                        class="relative block px-2 py-2 transition hover:text-orange-500 dark:hover:text-orange-500"
+                        aria-label={item.label}
+                        href={item.url}
+                    >
+                        {item.title}
+                    </a>
+                ),
+            )
+        }
+    </nav>
+</header>
+
+<style>
+    #header-nav {
+        animation: nav-shadown 1s linear both;
+        animation-timeline: scroll();
+        animation-range: 0 100px;
+    }
+
+    @keyframes nav-shadown {
+        to {
+            backdrop-filter: blur(20px);
+        }
+    }
+</style>

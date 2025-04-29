@@ -1,0 +1,15 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const currentYear = new Date().getFullYear()
+---
+
+<footer
+  class="mt-10 mb-4 w-full mx-auto lg:max-w-4xl md:max-w-2xl flex justify-center"
+>
+    <span class="my-4 text-sm sm:text-center text-zinc-600/90 dark:text-zinc-200/90">
+        © {currentYear} - {t("footer.text")}
+    </span>
+</footer>

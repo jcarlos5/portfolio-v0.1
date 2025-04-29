@@ -1,0 +1,60 @@
+[
+    {
+        "id": "es",
+        "items": [
+            {
+                "id": "1",
+                "title": "Experiencia",
+                "label": "experiencia",
+                "url": "/#experience"
+            },
+            {
+                "id": "2",
+                "title": "Proyectos",
+                "label": "proyectos",
+                "url": "/#projects"
+            },
+            {
+                "id": "3",
+                "title": "Sobre mí",
+                "label": "sobre-mi",
+                "url": "/#about"
+            },
+            {
+                "id": "4",
+                "title": "Contacto",
+                "label": "contact",
+                "url": "/#contact"
+            }
+        ]
+    },
+    {
+        "id": "en",
+        "items": [
+            {
+                "id": "1",
+                "title": "Experience",
+                "label": "experience",
+                "url": "/#experience"
+            },
+            {
+                "id": "2",
+                "title": "Projects",
+                "label": "projects",
+                "url": "/#projects"
+            },
+            {
+                "id": "3",
+                "title": "About me",
+                "label": "about-me",
+                "url": "/#about"
+            },
+            {
+                "id": "4",
+                "title": "Contact",
+                "label": "contact",
+                "url": "/#contact"
+            }
+        ]
+    }
+]

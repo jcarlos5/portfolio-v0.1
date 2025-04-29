@@ -1,0 +1,39 @@
+---
+import SectionContainer from "./containers/SectionContainer.astro";
+import SocialPill from "./elements/SocialPill.astro";
+import MailIcon from "./icons/Mail.astro";
+import LinkedInIcon from "./icons/LinkedIn.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<SectionContainer id="#" class="py-16 md:py-36">
+    <div class="flex flex-col max-w-xl">
+        <h1
+            class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+        >
+            {t("hero.name")}
+        </h1>
+        <p
+            class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-accent-dark [&>strong]:text-accent-light [&>strong]:font-semibold dark:text-gray-300"
+        >
+            {t("hero.description.experience")} 
+            <strong>{t("hero.description.profession")}</strong> 
+            {t("hero.description.location")} 
+            {t("hero.description.technologies")}
+        </p>
+        <nav class="flex flex-wrap gap-4 mt-8">
+            <SocialPill href="mailto:josecarlosvilchezvillegas@gmail.com">
+              <MailIcon class="size-4" />
+              {t('hero.social.mail')}
+            </SocialPill>
+            <SocialPill href="https://www.linkedin.com/in/jose-vilchez-villegas/">
+              <LinkedInIcon class="size-4" />
+              {t('hero.social.linkedin')}
+            </SocialPill>
+          </nav>
+    </div>
+</SectionContainer>

@@ -1,0 +1,75 @@
+[
+    {
+        "id": "es",
+        "items": [
+            {
+                "id": 1,
+                "title": "Eco USAT",
+                "image": "-",
+                "tags": ["web", "Android"],
+                "description": "Solución para el apoyo a la recaudación de arbitrios en municipalidades a través de la gratifiación con monedas virtuales por el reciclaje de residuos sólidos.",
+                "frontend": ["Python", "Kotlin"],
+                "backend": ["Node.js"],
+                "link": "#",
+                "github": ""
+            },
+            {
+                "id": 2,
+                "title": "Farmabot",
+                "image": "-",
+                "tags": ["web"],
+                "description": "Aplicación para la gestión de inventario de farmacias y apoyada en inteligencia artificial para pronosticar la demanda de medicamentos y soportar el proceso de abastecimiento.",
+                "frontend": ["Next.js", "React", "Tailwind CSS"],
+                "backend": ["Node.js"],
+                "link": "#",
+                "github": ""
+            },
+            {
+                "id": 3,
+                "title": "Tanimental",
+                "image": "-",
+                "tags": ["Android", "ios"],
+                "description": "Aplicación móvil para fomentar el autocuidado de la salud mental.",
+                "frontend": ["React Native"],
+                "backend": ["Node.js"],
+                "link": "#",
+                "github": ""
+            },
+            {
+                "id": 4,
+                "title": "OCR Documentos",
+                "image": "-",
+                "tags": ["web", "Desktop"],
+                "description": "Sistema integrado para la gestión documentaria de una entidad gubernamental que permite digitalizar documentos físicos, almacenarlos y entregarlos de forma sencilla a los usuarios finales a través de una interfaz web.",
+                "link": "#",
+                "github": ""
+            },
+            {
+                "id": 5,
+                "title": "Security Support",
+                "image": "-",
+                "tags": ["web", "Android"],
+                "description": "Sistema distribuido para la gestión de personal de seguridad con funcionalidades de geolocalización en tiempo real, trazado y optimización de rutas para atención de emergencias y reportes de incidentes.",
+                "frontend": ["Kotlin", "PHP"],
+                "backend": ["Node.js"],
+                "link": "#",
+                "github": ""
+            },
+            {
+                "id": 6,
+                "title": "SiteGuard",
+                "image": "-",
+                "tags": ["web", "IoT"],
+                "description": "Solución para el monitoreo, detección y atención de intrusiones en tiempo real en campos de cultivo utilizando visión artificial y dispositivos IoT.",
+                "frontend": ["PHP"],
+                "backend": ["Python", "Java"],
+                "link": "#",
+                "github": ""
+            }
+        ]
+    },
+    {
+        "id": "en",
+        "items": []
+    }
+]

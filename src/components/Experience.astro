@@ -1,0 +1,28 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import SectionContainer from "./containers/SectionContainer.astro";
+import Briefcase from "./icons/Briefcase.astro";
+import ExperienceItems from "./elements/ExperienceItem.astro";
+import { getEntry } from "astro:content";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const EXPERIENCES = (await getEntry("workExperiences", lang))?.data.items || [];
+---
+
+<SectionContainer
+    id="experience"
+    title={t("experience.title")}
+    Icon={Briefcase}
+>
+    <ol class="relative mt-16">
+        {
+            EXPERIENCES.map((experience) => (
+                <li class="">
+                    <ExperienceItems {...experience} />
+                </li>
+            ))
+        }
+    </ol>
+</SectionContainer>

@@ -1,0 +1,19 @@
+---
+const { class: className, id, title, Icon } = Astro.props;
+---
+
+<section
+  id={id}
+  data-section={id}
+  class={`section ${className} scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl`}
+>
+  {
+    title && (
+      <h2 class="flex items-center pt-0 mt-0 mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
+        {Icon && <Icon class="size-8" />}
+        {title}
+      </h2>
+    )
+  }
+  <slot />
+</section>

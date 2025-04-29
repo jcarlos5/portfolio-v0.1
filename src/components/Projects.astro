@@ -1,0 +1,18 @@
+---
+import { getEntry } from "astro:content";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import SectionContainer from "./containers/SectionContainer.astro";
+import ProjectItem from "./elements/ProjectItem.astro";
+import CheckUpList from "./icons/CheckUpList.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const PROJECTS = (await getEntry("projects", lang))?.data.items || [];
+---
+
+<SectionContainer id="projects" title={t("projects.title")} Icon={CheckUpList}>
+    <div class="flex flex-row flex-wrap gap-y-8">
+        {PROJECTS.map((project) => <ProjectItem {...project} />)}
+    </div>
+</SectionContainer>
